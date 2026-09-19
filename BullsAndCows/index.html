@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cryptex Decoder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Cryptex Decoder</h1>
+            <p>Guess the 5-digit code. All digits must be unique.</p>
+        </header>
+
+        <div class="cryptex-container">
+            <div class="cryptex">
+                <div class="dial" data-index="0">
+                    <button class="arrow up">▲</button>
+                    <div class="value">0</div>
+                    <button class="arrow down">▼</button>
+                </div>
+                <div class="dial" data-index="1">
+                    <button class="arrow up">▲</button>
+                    <div class="value">1</div>
+                    <button class="arrow down">▼</button>
+                </div>
+                <div class="dial" data-index="2">
+                    <button class="arrow up">▲</button>
+                    <div class="value">2</div>
+                    <button class="arrow down">▼</button>
+                </div>
+                <div class="dial" data-index="3">
+                    <button class="arrow up">▲</button>
+                    <div class="value">3</div>
+                    <button class="arrow down">▼</button>
+                </div>
+                <div class="dial" data-index="4">
+                    <button class="arrow up">▲</button>
+                    <div class="value">4</div>
+                    <button class="arrow down">▼</button>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="check-btn">UNLOCK</button>
+            </div>
+            <div id="error-message" class="hidden">All 5 digits must be unique!</div>
+        </div>
+
+        <div class="history-container">
+            <h2>History</h2>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Unlocked!</h2>
+            <p>You have cracked the cryptex.</p>
+            <p>The code for the lock is:</p>
+            <div class="secret-display">
+                <span class="dim"></span>
+                <span class="highlight"></span>
+                <span class="highlight"></span>
+                <span class="highlight"></span>
+                <span class="dim"></span>
+            </div>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
