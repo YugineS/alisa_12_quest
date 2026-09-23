@@ -6,6 +6,8 @@ const errorMessage = document.getElementById('error-message');
 const historyList = document.getElementById('history-list');
 const successModal = document.getElementById('success-modal');
 const restartBtn = document.getElementById('restart-btn');
+const introModal = document.getElementById('intro-modal');
+const introOkBtn = document.getElementById('intro-ok-btn');
 
 // Initialize with a sequence of unique digits
 let currentGuess = [0, 1, 2, 3, 4];
@@ -79,8 +81,8 @@ checkBtn.addEventListener('click', () => {
     historyItem.innerHTML = `
         <span class="history-guess">${guessStr}</span>
         <span class="history-feedback">
-            <span class="bulls">${bulls} Bulls</span>
-            <span class="cows">${cows} Cows</span>
+            <span class="bulls">${bulls} Быки</span>
+            <span class="cows">${cows} Коровы</span>
         </span>
     `;
     historyList.prepend(historyItem); // Add to top
@@ -105,6 +107,10 @@ restartBtn.addEventListener('click', () => {
     currentGuess = [0, 1, 2, 3, 4];
     historyList.innerHTML = '';
     updateUI();
+});
+
+introOkBtn.addEventListener('click', () => {
+    introModal.classList.add('hidden');
 });
 
 // Initial setup

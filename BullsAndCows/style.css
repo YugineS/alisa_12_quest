@@ -317,7 +317,7 @@ header p {
     text-shadow: 0 0 15px rgba(0,255,0,0.6);
 }
 
-#restart-btn {
+#restart-btn, #intro-ok-btn {
     margin-top: 35px;
     background: transparent;
     border: 2px solid var(--gold-mid);
@@ -330,7 +330,7 @@ header p {
     transition: all 0.2s;
 }
 
-#restart-btn:hover {
+#restart-btn:hover, #intro-ok-btn:hover {
     background: rgba(225, 179, 54, 0.1);
 }
 

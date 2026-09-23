@@ -10,8 +10,8 @@
 <body>
     <div class="app-container">
         <header>
-            <h1>Cryptex Decoder</h1>
-            <p>Guess the 5-digit code. All digits must be unique.</p>
+            <h1>Это криптекс</h1>
+            <p>Подберите код из 5 разных цифр.</p>
         </header>
 
         <div class="cryptex-container">
@@ -43,22 +43,33 @@
                 </div>
             </div>
             <div class="actions">
-                <button id="check-btn">UNLOCK</button>
+                <button id="check-btn">Открыть</button>
             </div>
-            <div id="error-message" class="hidden">All 5 digits must be unique!</div>
+            <div id="error-message" class="hidden">Все 5 цифр должны быть уникальны!</div>
         </div>
 
         <div class="history-container">
-            <h2>History</h2>
+            <h2>История ходов</h2>
             <div id="history-list"></div>
+        </div>
+    </div>
+
+    <div id="intro-modal" class="modal">
+        <div class="modal-content">
+            <p>Вот и всё, странники. Дальше пути нет — только сам сундук.</p>
+            <p>Но Хранитель не отдаёт код просто так. Он спрятал его в игре чисел:<br>
+            угадайте цифры, и он скажет вам, сколько "быков" верны и на своих местах,<br>
+            а сколько "коров" бродят рядом, но не там.</p>
+            <p>Отгадаете код — печать снимется сама.</p>
+            <button id="intro-ok-btn">OK</button>
         </div>
     </div>
 
     <div id="success-modal" class="modal hidden">
         <div class="modal-content">
-            <h2>Unlocked!</h2>
-            <p>You have cracked the cryptex.</p>
-            <p>The code for the lock is:</p>
+            <h2>Открыто!</h2>
+            <p>Вы взломали криптекс!</p>
+            <p>Код от сундука:</p>
             <div class="secret-display">
                 <span class="dim"></span>
                 <span class="highlight"></span>
@@ -66,7 +77,7 @@
                 <span class="highlight"></span>
                 <span class="dim"></span>
             </div>
-            <button id="restart-btn">Play Again</button>
+            <button id="restart-btn">Сыграть еще раз?</button>
         </div>
     </div>
 
